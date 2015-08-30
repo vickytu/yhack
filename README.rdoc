@@ -1,1 +1,48 @@
 Learning how to use Github!
+
+Instuctions adapted from Rails Girls:
+Prerequiste: a github account w/ newly created repo called "yhack" (no README.rdoc)
+
+To check if Github is installed:
+$ git --version
+(if not, install it! Will not show up as Applications icon but will be able to execute git command)
+
+Create a directory to hold all your github projects
+$ mkdir /Documents/github
+
+Initialize a git repo in that folder
+$ mkdir /Documents/github/yhack
+$ cd /Documents/github/yhack
+$ git init
+
+Check if a file called README.rdoc exists in that directory. It should not
+$ ls README.rdoc
+
+Create it by typing
+$ touch README.rdoc
+
+Check the files in your working directory
+$ git status
+
+Add in all your files and changes to a staging area
+$ git add .
+
+Commit your files, adding the message "first commit"
+$ git commit -m "first commit"
+
+Create a remote/connection named "origin" pointing at the github repo you just created
+$ git remote add origin https://github.com/vickytu/yhack
+
+If this command fails, you need to remove the remote/connection before oyu can reassign it
+$ git remote remove origin
+
+Send commits to "master branch"
+$ git push -u origin master
+
+To continue making changes to files in your local yhack directory and push them to Gitbub, use the following 3 commands
+$ git add .
+$ git commit -m "type your commit message here"
+$ git push origin master
+
+Once the remote/connection has been established, it should exist even if you move the local yhack directory around.
+ 
